@@ -37,7 +37,7 @@
 # Estrutura back-end
 
 ## Diretório raiz da API
-- `app\Models` - Contém todos os modelos `Eloquent` 
+- `app/Models` - Contém todos os modelos `Eloquent` 
 - `app/Http/Controllers` - Contém todos os controladores da API 
 - `config` - Contém todos os arquivos de configuração do aplicativo 
 - `database/migrations` - Contém arquivos para gerar o banco de dados, que pode ser efeito através do comando:  `php artisan migrate` (Só execute esse comando em caso de não importação do `app_teste.sql` localizado na pasta raiz do projeto.)
