@@ -1,6 +1,6 @@
 # Informações de instalação, execução e estrutura do projeto
  
- Este projeto está definido com uma API em `Laravel v6.2`, front-end com `Angular v11.2` e um `script` de importação onde provem dados de uma API pública. 
+ Este projeto está definido com uma API em `Laravel v6.2`, front-end com `Angular v11.2` e um `script` de importação onde provem dados de uma API pública ([Json Placeholder](https://jsonplaceholder.typicode.com/). 
  
  A seguir as instruções de instalação de suas dependências que ficarão localizadas em `vendor/` para o projeto API e `node_modules/` para o front-end.
  
@@ -31,7 +31,7 @@
 
 - Defina suas configurações de acesso a base dados no arquivo ` Conn/connection.php`
 
-- Execute o seguinte comando: `php script.php` para realizar a importação da API pública (Aqui utilizamos [Json Placeholder](https://jsonplaceholder.typicode.com/))
+- Execute o seguinte comando: `php script.php` para realizar a importação da API pública
 
 
 # Estrutura back-end
