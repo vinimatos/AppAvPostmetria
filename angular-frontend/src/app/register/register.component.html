@@ -1,0 +1,47 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="register()" class="form-signin" novalidate
+        [class.was-validated]="registerForm.invalid && (registerForm.dirty || registerForm.touched)">
+    <h2 class="form-signin-heading text-center">Registro Usuário</h2>
+
+    <div class="alert alert-danger" *ngIf="dataInvalid">
+      <p *ngFor="let error of formErrors">{{ error }}</p>
+    </div>
+    <div class="form-group">
+      <label for="name" class="sr-only">Name</label>
+      <input type="text" formControlName="name" id="name" class="form-control" [class.is-invalid]="dataInvalid"
+             placeholder="Nome Completo" required>
+      <div *ngIf="name.hasError('required')" class="invalid-feedback">
+       Informe seu nome.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" formControlName="email" id="inputEmail" class="form-control" [class.is-invalid]="dataInvalid"
+             placeholder="Email" required>
+      <div *ngIf="email.hasError('required')" class="invalid-feedback">
+       Informe seu email.
+      </div>
+      <div *ngIf="email.hasError('pattern')" class="invalid-feedback">
+          Insira um email válido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" formControlName="password" id="inputPassword" class="form-control"
+             [class.is-invalid]="dataInvalid" placeholder="Senha com 8 ou mais dígitos" required>
+      <div *ngIf="password.hasError('required')" class="invalid-feedback">
+       Informe sua senha
+      </div>
+      <div *ngIf="password.hasError('minlength')" class="invalid-feedback">
+        A senha deve conter pelo menos 8 caracteres
+      </div>
+    </div>
+
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="registerForm.invalid" *ngIf="!formSubmitting">Registrar</button>
+    <button class="btn btn-lg btn-primary btn-block" type="button" [disabled]="formSubmitting" *ngIf="formSubmitting">Registrar</button>
+  </form>
+  <p class="text-center">Você já tem conta? Acesse <a routerLink="/login">aqui</a></p>
+
+</div> <!-- /container -->

@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <div class="text-center">
+    <h5>Bem vindo</h5> 
+    <p class="lead">Contéudo gerado através da API: <a target="_blank" href="https://jsonplaceholder.typicode.com/">Json Placeholder</a></p>
+    <h6 *ngIf="noData">Execute o script para a importação de dados </h6>
+  </div>
+  <hr>
+  <div class="row" >
+    <table class="table table-bordered table-striped mb-0">
+      <thead>
+          <th class="text-center">#</th>
+          <th  class="text-center">Título</th>
+          <th  class="text-center">Descrição</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of request">
+              <td  class="text-center">{{item.id}}</td>
+              <td  class="text-center">{{item.title}}</td>
+              <td>{{item.body}}</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+</div>
