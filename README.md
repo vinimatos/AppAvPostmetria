@@ -27,7 +27,7 @@
 
 # Script
 
-##  Acesse o diretório `script/` localizado na pasta raiz.
+##  Acesse o diretório `script/` localizado na pasta raiz
 
 - Defina suas configurações de acesso a base dados no arquivo ` Conn/connection.php`
 
