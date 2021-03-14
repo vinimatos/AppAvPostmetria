@@ -12,14 +12,9 @@
 */
 
 Route::middleware('auth:api')->group(function () {
- 
 Route::get('/home', 'HomeController@index');
-   
 });
 
-// User routes
-// login route
-//Route::post('login', '@login');
 
 Route::post('login', [ 'as' => 'login', 'uses' => 'AuthController@login']);
 // register
